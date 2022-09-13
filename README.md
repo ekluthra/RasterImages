@@ -339,6 +339,24 @@ Submit your completed homework on MarkUs. Open the [MarkUs](https://markus.teach
 page and submit all the `.cpp` files in your `src/` directory under
 Assignment 1: Raster Images in the `raster-images` repository.
 
+### Frequently Asked Questions (FAQ)
+
+This section will be updated if there are any important questions brought up in
+the [GitHub issues](https://github.com/karansher/computer-graphics-raster-images/issues)
+that can be helpful to other students.
+
+> Q: Can I write helper functions?
+
+A: Yes, as long as you do not make any new header files or source files. The
+helper functions can only be in the provided .cpp files, since these are the
+only files you submit.
+
+> Q: I'm on Windows. Can I use a compiler other than Visual Studio?
+
+A: Although something like WSL or cygwin can work for this assignment, we
+strongly recommend setting up Visual Studio in order to make your life easier
+for future assignments[³](#³windowsusers).
+
 ### Questions? 
 
 Direct your questions to the [Issues page of this
