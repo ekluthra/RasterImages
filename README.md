@@ -355,7 +355,14 @@ only files you submit.
 
 A: Although something like WSL or cygwin can work for this assignment, we
 strongly recommend setting up Visual Studio in order to make your life easier
-for future assignments[³](#³windowsusers).
+for future assignments. See the notes for Windows users at the bottom of this
+page.
+
+> Q: I clicked on raster.exe in File Explorer and it crashed! What happened?
+
+A: Clicking on the exe on Windows doesn't work due to a subtle discrepancy with
+how CMake projects work on Windows vs Mac/Linux. See the notes for Windows users
+at the bottom of this page.
 
 ### Questions? 
 
