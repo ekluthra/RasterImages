@@ -2,7 +2,7 @@
 
 > **To get started:** Clone this repository:
 > 
->     git clone  https://github.com/alecjacobson/computer-graphics-raster-images.git
+>     git clone  https://github.com/karansher/computer-graphics-raster-images.git
 
 **Do not fork:** Clicking "Fork" will create a _public_ repository. If you'd like to use GitHub while you work on your assignment, then mirror this repo as a new _private_ repository: https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private
 
@@ -335,20 +335,20 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 
 ### Submission
 
-Submit your completed homework on MarkUs. Open the [MarkUs](https://markus.teach.cs.toronto.edu/2022-01) course 
+Submit your completed homework on MarkUs. Open the [MarkUs](https://markus.teach.cs.toronto.edu/2022-09) course 
 page and submit all the `.cpp` files in your `src/` directory under
 Assignment 1: Raster Images in the `raster-images` repository.
 
 ### Questions? 
 
 Direct your questions to the [Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
+repository](https://github.com/karansher/computer-graphics-raster-images/issues).
 
 ### Answers?
 
 Help your fellow students by answering questions or positions helpful tips on
 [Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
+repository](https://github.com/karansher/computer-graphics-raster-images/issues).
 
 -----------------------------------------------------------------------------
 
@@ -380,5 +380,22 @@ repository](https://github.com/alecjacobson/computer-graphics-raster-images/issu
 >
 > Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
 > 64bit mode. It will not work with a 32bit build and it will not work with
-> older versions of visual studio.
->
+> older versions of visual studio. Please do not use WSL/cygwin/other Windows
+> subsystems or compilers, as these all cause issues in later assignments that
+> require OpenGL. Follow the instructions
+[here](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)
+> to install the latest version of Visual Studio, selecting the "Desktop
+> Development with C++" workload.
+> 
+> CMake project conventions are somewhat different for Visual Studio-based
+> builds compared to make-based builds. Rather than the output executables being
+> in the `build` folder, they are instead in the `build\Release` or `build\Debug`
+> folder, depending on which configuration you are currently using. As a result,
+> the image file paths baked into the executable (which assume the executable
+> is run from `build`) will be broken if you run the exe from the `Release` or
+> `Debug` folders (which is what happens when you click on it in the File
+> Explorer). Please either run your code from Visual Studio directly, clicking
+> on the green arrow button that says something like "Local Windows Debugger",
+> or run your exe from the command line in the `build` directory (e.g.,
+`.\build\Debug\raster`).
+
