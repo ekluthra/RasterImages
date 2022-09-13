@@ -397,5 +397,5 @@ repository](https://github.com/karansher/computer-graphics-raster-images/issues)
 > Explorer). Please either run your code from Visual Studio directly, clicking
 > on the green arrow button that says something like "Local Windows Debugger",
 > or run your exe from the command line in the `build` directory (e.g.,
-`.\build\Debug\raster`).
+`.\Debug\raster`).
 
