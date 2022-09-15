@@ -357,6 +357,14 @@ A: Yes, as long as you do not make any new header files or source files. The
 helper functions can only be in the provided .cpp files, since these are the
 only files you submit.
 
+> Q: Does my output need to be pixel perfect?
+
+A: No. Although you should get pixel-perfect results for the simpler questions,
+don't worry if, for example, your demosaic output has some minor pixel
+differences from ours. As long as it looks like the expected image, you should
+get full marks. That said, differences that you can see without an image diff
+tool or examining pixel values likely indicate a bug in your code.
+
 > Q: I'm on Windows. Can I use a compiler other than Visual Studio?
 
 A: Although something like WSL or cygwin can work for this assignment, we
