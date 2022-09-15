@@ -364,11 +364,36 @@ strongly recommend setting up Visual Studio in order to make your life easier
 for future assignments. See the notes for Windows users at the bottom of this
 page.
 
+> Q: I'm on Windows. Do I have to use the Visual Studio IDE?
+
+A: No. You need it for its compiler, so you can theoretically use any text
+editor you want. Then, you can [compile the project from the command
+line](https://stackoverflow.com/questions/498106/how-do-i-compile-a-visual-studio-project-from-the-command-line).
+That being said, compiling Visual Studio on the command line is much less
+convenient than from the IDE, so if you don't have a strong preference for your
+text editor we recommend to use the IDE as well.
+
+> Q: I'm on Mac. Do I have to use the XCode IDE?
+
+A: No. We only ask you to install XCode to access its command line tools, not
+the IDE itself. In fact, by default CMake will not produce an XCode project.
+
 > Q: I clicked on raster.exe in File Explorer on Windows and it crashed! What happened?
 
 A: Clicking on the exe on Windows doesn't work due to a subtle discrepancy with
 how CMake projects work on Windows vs Mac/Linux. See the notes for Windows users
 at the bottom of this page.
+
+> Q: I tried running my code in Visual Studio and I got an error message. What's
+> going on here?
+
+A: CMake generates an `ALL_BUILD` target that, when compiled, compiles
+everything else in the project, but cannot be run. You instead need to change
+the startup project to the one matching the name of the exe you want to run
+([see here for instructions](https://stackoverflow.com/questions/4797481/visual-studio-set-default-startup-project)).
+For this assignment you just need to change the startup project to `raster`, but
+future assignments can have multiple executables, so you may need to change the
+startup project several times while testing your code.
 
 > Q: My image dimensions are zero / strange numbers. What's going on?
 
@@ -395,7 +420,8 @@ cmake from their website, it should be located in
 link](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix)
 though note that newer Macs use zsh as the default shell so you may need to
 update your `.zshrc` instead. This shouldn't be a problem on Linux systems if
-you use your distribution's package manager.
+you use your distribution's package manager (see the note for Linux users at the
+bottom of this page).
 
 ### Questions? 
 
@@ -412,7 +438,8 @@ repository](https://github.com/karansher/computer-graphics-raster-images/issues)
 
 > #### ¹ Mac Users
 >
-> You will need to install Xcode if you haven't already. 
+> You will need to install Xcode if you haven't already to be able to use the
+> C++ compiler. 
 >
 > #### ² Linux Users
 >
