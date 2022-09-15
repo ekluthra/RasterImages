@@ -12,6 +12,12 @@
 Welcome to Computer Graphics! The main purpose of this assignment will be to get
 you up and running with C++ and the cmake build setup used for our assignments.
 
+For this assignment, and all future assignments, please read the following:
+- this entire document (the README)
+- the comments in the header files (the .h files located in the `include` folder)
+
+Some articles linked here may also contain useful information that you should
+read, so use your judgement there.
 
 ### Prerequisite installation
 
@@ -358,11 +364,38 @@ strongly recommend setting up Visual Studio in order to make your life easier
 for future assignments. See the notes for Windows users at the bottom of this
 page.
 
-> Q: I clicked on raster.exe in File Explorer and it crashed! What happened?
+> Q: I clicked on raster.exe in File Explorer on Windows and it crashed! What happened?
 
 A: Clicking on the exe on Windows doesn't work due to a subtle discrepancy with
 how CMake projects work on Windows vs Mac/Linux. See the notes for Windows users
 at the bottom of this page.
+
+> Q: My image dimensions are zero / strange numbers. What's going on?
+
+A: This is actually the same issue as the previous question --- you're not
+running your binary from the correct location. Make sure you're running your
+code from the `build` folder.
+
+> Q: I opened the project folder in Visual Studio, and I can build the project,
+> but it still crashes. What's going on?
+
+A: Again, this is a relative path issue. Visual Studio is probably reading
+CMakeLists.txt and setting things up accordingly, but its slightly different
+from running cmake from the command line. To avoid any confusion, I'd recommend
+using cmake from the command line and opening the generated .sln file in Visual
+Studio.
+
+> Q: I can't find cmake from the command line!
+
+A: This means your `PATH` variable isn't set correctly. I think Windows does this
+properly but some Mac installations don't seem to include it. If you downloaded
+cmake from their website, it should be located in
+`/Applications/CMake.app/Contents/bin/cmake`, so use this instead of just
+`cmake`. For info on setting your PATH variable on Mac/Linux see [this
+link](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix)
+though note that newer Macs use zsh as the default shell so you may need to
+update your `.zshrc` instead. This shouldn't be a problem on Linux systems if
+you use your distribution's package manager.
 
 ### Questions? 
 
