@@ -7,9 +7,12 @@ void rgb_to_gray(
   std::vector<unsigned char> & gray)
 {
   gray.resize(height*width);
-  ////////////////////////////////////////////////////////////////////////////
-  // Add your code here
-  ////////////////////////////////////////////////////////////////////////////
+  // the wikipedia page linked on the assignment handout used these values
+  // https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
+  for (int i = 0; i < width * height; i++){
+    double pixel = (double) (0.2126 * (rgb[3*i]) + 0.7152 * (rgb[i*3+1]) + 0.0722 * (rgb[i*3+2]));
+    gray[i] = (unsigned char) (pixel);
+  }
 }
 
 
